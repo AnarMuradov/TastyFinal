@@ -1,0 +1,48 @@
+.navbar{
+    width: 100%;
+    min-height: 80px;
+    position: fixed;
+    background-color: #00000075;
+    z-index: 1;
+    &__container{
+        width: 70%;
+        min-height: 80px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        &__logo{
+            font-size: 23px;
+            font-weight: 500;
+            border: 3px solid white;
+            padding: 3px;
+            cursor: pointer;
+        }
+        &__items{
+            &__list{
+                display: flex;
+                gap: 20px;
+                a{
+                    color: white;
+                }
+                .active{
+                    color: #ffffff80;
+                }
+            }
+        }
+        &__menu{
+            display: none;
+        }
+        @media only screen and (max-width: 600px) {
+            &__items {
+                display: none;
+            }
+            &__menu{
+                display: block;
+                color: white;
+                font-size: 20px;
+            }
+          }
+    }
+}
